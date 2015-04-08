@@ -28,7 +28,7 @@ To get all these working on your platform (windows, linux, mac), I strongly reco
 
 The repo is organised in different sections:
 
-**1. [mailing]()**
+**1. [mailing](https://github.com/nicolasfauchereau/ICU/blob/master/mail/)**
 
   generates the monthly mail sent to the ICU mailing list, with time of the teleconference
   translated in the different time-zones in the region.
@@ -39,7 +39,7 @@ The repo is organised in different sections:
   $ ./make_mail_ICU.py 175 2015 04 02 12 30
   ```
 
-**2. [maps]()**
+**2. [maps](https://github.com/nicolasfauchereau/ICU/blob/master/maps/)**
 
   + TRMM Rainfall [(Tropical Rainfall Measurement Mission)](https://climatedataguide.ucar.edu/climate-data/trmm-tropical-rainfall-measuring-mission)
 
@@ -55,7 +55,7 @@ The repo is organised in different sections:
     + The other is based on the actual data available from [](), the whole process is
     constructed around a few scripts and notebooks:
 
-      + [get_daily_TRMM.py]() downloads the TRMM data daily in binary and converts the files
+      + [get_daily_TRMM.py](https://github.com/nicolasfauchereau/ICU/blob/master/maps/TRMM/get_daily_TRMM.py) downloads the TRMM data daily in binary and converts the files
       to NetCDF
       + []()
 
