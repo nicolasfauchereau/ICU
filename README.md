@@ -59,12 +59,18 @@ $ ./[make_mail_ICU.py](https://github.com/nicolasfauchereau/ICU/blob/master/mail
 
       + [get_daily_TRMM.py](https://github.com/nicolasfauchereau/ICU/blob/master/maps/TRMM/get_daily_TRMM.py) downloads the TRMM data daily in binary and converts the files
       to NetCDF
-      + [make_ICU_TRMM_map.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/make_ICU_TRMM_map.ipynb) creates the map of averages or anomalies for the current month (if we are after the 25) or the previous month (before the 25th)
+      + [make_ICU_TRMM_map.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/make_ICU_TRMM_map.ipynb) creates the map of averages or anomalies for the current month (if we are after the 25) or the previous month (before the 25th)  
 
 
   + **Outgoing Longwave Radiation (OLR) anomalies** from NOAA
 
-      + see [make_ICU_OLR_map.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/OLR/make_ICU_OLR_map.ipynb)
+      + see [make_ICU_OLR_map.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/OLR/make_ICU_OLR_map.ipynb)  
+
+
+  + **Sea Surface Temperature (SST) anomalies** from the NOAA OISST V2 dataset
+
+      + see [make_ICU_SST_map.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/SST/make_ICU_SST_map.ipynb)  
+
 
 **3. [ENSO indices](https://github.com/nicolasfauchereau/ICU/blob/master/indices/)**
 
@@ -72,4 +78,12 @@ $ ./[make_mail_ICU.py](https://github.com/nicolasfauchereau/ICU/blob/master/mail
 
   + [NIWA SOI](): calculates the *NIWA* SOI according to the Troup method using the Tahiti and Darwin MSLP data made available at the [LongPaddock website]()
 
-**4. TRMM Regional Rainfall Estimates**
+**4. TRMM-based Near realtime Monthly Regional Rainfall Estimates**
+
+  The rainfall regional estimates for the ICU Island Groups are calculated from the TRMM daily dataset (updated daily, 2 days latency).
+
+  For each Island group, the monthly value is derived from the average of all grid-points (or "pixels") in the TRMM Dataset that are contained of intersect with a coastline, to ensure that the values correspond as closely as possible to rainfall on land, and excluding rainfall falling on ocean surfaces.
+
+  The climatology used has been established over the 2001 – 2012 period. The categories ("Well-below", "Below", etc.) are determined according to the percentage of the normal rainfall for that month.
+
+  The whole process relies on a suite of Python scripts and IPython notebooks, they will be uploaded here shortly
