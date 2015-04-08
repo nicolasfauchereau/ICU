@@ -1,7 +1,7 @@
 # Island Climate Update
 
 This repository gathers scripts and notebooks used to generate various products
-related to the [Island Climate Update (ICU)](http://www.niwa.co.nz/climare/icu).
+related to the [Island Climate Update (ICU)](http://www.niwa.co.nz/climate/icu).
 
 The Island Climate Update is a monthly Regional Climate Outlook Forum and outlook
 bulletin for the southwest Pacific.
