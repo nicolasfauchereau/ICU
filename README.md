@@ -61,7 +61,9 @@ $ ./[make_mail_ICU.py](https://github.com/nicolasfauchereau/ICU/blob/master/mail
       to NetCDF
       + [make_ICU_TRMM_map.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/make_ICU_TRMM_map.ipynb) creates the map of averages or anomalies for the current month (if we are after the 25) or the previous month (before the 25th)
 
-  + Sea Surface Temperature anomalies from the OI-SST dataset
+  + Outgoing Longwave Radiation (OLR) from NOAA
+
+      + see [make_ICU_OLR_map.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/OLR/make_ICU_OLR_map.ipynb)
 
 
 **3. ENSO indices**
