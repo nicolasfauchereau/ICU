@@ -35,11 +35,11 @@ This github repository is organised in different sections:
 
   usage example:
 
-  ```
-  $ ./make_mail_ICU.py 175 2015 04 02 12 30
-  ```
+<font color='gray'>
+$ ./[make_mail_ICU.py](https://github.com/nicolasfauchereau/ICU/blob/master/mail/make_mail_ICU.py) 175 2015 04 02 12 30
+<font>
 
-  generates the mail for the issue 175 of the ICU, teleconference to be held on the 2nd of April 2015 at 12:30 PM (assumes NZ time)
+  generates the mail for the issue *175* of the ICU, teleconference to be held on the *2*nd of *April* *2015* at *12*:*30* PM (assumes NZ time)
 
 **2. [Climate Maps](https://github.com/nicolasfauchereau/ICU/blob/master/maps/)**
 
