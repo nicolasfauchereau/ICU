@@ -10,13 +10,13 @@ go to:
 
 [https://speakerdeck.com/nicolasf/icu-175](https://speakerdeck.com/nicolasf/icu-175)
 
-To view examples of these products incorportated in the presentation material uploaded
-on [speakerdeck](https://speakerdeck.com/) before the ICU teleconference.
+To view examples of some of these products incorportated in the presentation material uploaded
+on [speakerdeck](https://speakerdeck.com/) before the monthly ICU teleconference.
 
 <hr size=5>
 
-The scripts and [notebooks]() are written in the language [Python](). They make
-heavy use of the **Python scientific stack**: i.e. in particular the following libraries:
+The scripts and [notebooks]() are written in the language [Python](www.python.org). They make
+heavy use of the [**Python scientific stack**](http://www.scipy.org/about.html): i.e. in particular the following libraries:
 
 + [Numpy](http://www.numpy.org/)
 + [Scipy](http://www.scipy.org/)
@@ -24,9 +24,9 @@ heavy use of the **Python scientific stack**: i.e. in particular the following l
 + [Matplotlib](http://matplotlib.org/)
 + [Basemap](http://matplotlib.org/basemap/)
 
-To get all these working on your platform (windows, linux, mac), I strongly recommend installing the [Anaconda Python distribution](https://store.continuum.io/cshop/anaconda/), developed and made available for free by [Continuum Analytics](http://continuum.io/).  
+To get all these working on your platform (Windows, Linux, Mac), I strongly recommend installing the [Anaconda Python distribution](https://store.continuum.io/cshop/anaconda/), developed and made available for free by [Continuum Analytics](http://continuum.io/).  
 
-The repo is organised in different sections:
+This github repository is organised in different sections:
 
 **1. [mailing](https://github.com/nicolasfauchereau/ICU/blob/master/mail/)**
 
@@ -38,6 +38,8 @@ The repo is organised in different sections:
   ```
   $ ./make_mail_ICU.py 175 2015 04 02 12 30
   ```
+
+  generates the mail for the issue 175 of the ICU, teleconference to be held on the 2nd of April 2015 at 12:30 PM (assumes NZ time)
 
 **2. [maps](https://github.com/nicolasfauchereau/ICU/blob/master/maps/)**
 
