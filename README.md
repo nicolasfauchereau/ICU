@@ -18,11 +18,11 @@ on [speakerdeck](https://speakerdeck.com/) before the ICU teleconference.
 The scripts and [notebooks]() are written in the language [Python](). They make
 heavy use of the **Python scientific stack**: i.e. in particular the following libraries:
 
-+ Numpy
-+ Scipy
-+ Pandas
-+ Matplotlib
-+ Basemap
++ [Numpy](http://www.numpy.org/)
++ [Scipy](http://www.scipy.org/)
++ [Pandas](http://pandas.pydata.org/)
++ [Matplotlib](http://matplotlib.org/)
++ [Basemap](http://matplotlib.org/basemap/)
 
 To get all these working on your platform (windows, linux, mac), I strongly recommend installing the [Anaconda Python distribution](https://store.continuum.io/cshop/anaconda/), developed and made available for free by [Continuum Analytics](http://continuum.io/).  
 
@@ -41,7 +41,7 @@ The repo is organised in different sections:
 
 **2. [maps](https://github.com/nicolasfauchereau/ICU/blob/master/maps/)**
 
-  + TRMM Rainfall [(Tropical Rainfall Measurement Mission)](https://climatedataguide.ucar.edu/climate-data/trmm-tropical-rainfall-measuring-mission)
+  +TRMM Rainfall [(Tropical Rainfall Measurement Mission)](https://climatedataguide.ucar.edu/climate-data/trmm-tropical-rainfall-measuring-mission)
 
     there are two versions:
 
