@@ -74,9 +74,9 @@ $ ./[make_mail_ICU.py](https://github.com/nicolasfauchereau/ICU/blob/master/mail
 
 **3. [ENSO indices](https://github.com/nicolasfauchereau/ICU/blob/master/indices/)**
 
-  + [plot_real_time_indices.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/indices/plot_real_time_indices.ipynb) downloads the Southern Oscillation Index and NINO indices data from the Australian Bureau of Meteorology and makes the plots
+  + [plot_real_time_indices.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/indices/plot_real_time_indices.ipynb) downloads the Southern Oscillation Index and NINO indices data from the [Australian Bureau of Meteorology (BoM)](http://www.bom.gov.au/) and makes the plots
 
-  + [NIWA SOI](): calculates the *NIWA* SOI according to the Troup method using the Tahiti and Darwin MSLP data made available at the [LongPaddock website]()
+  + [realtime_NIWA_SOI.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/indices/realtime_NIWA_SOI.ipynb): calculates the *NIWA* SOI according to the Troup method using the Tahiti and Darwin MSLP data made available via ftp by the [BoM](http://www.bom.gov.au/) at [ftp://ftp.bom.gov.au/anon/home/ncc/www/sco/soi/](ftp://ftp.bom.gov.au/anon/home/ncc/www/sco/soi/)
 
 **4. TRMM-based Near realtime Monthly Regional Rainfall Estimates**
 
