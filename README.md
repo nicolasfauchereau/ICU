@@ -41,9 +41,9 @@ This github repository is organised in different sections:
 
   generates the mail for the issue 175 of the ICU, teleconference to be held on the 2nd of April 2015 at 12:30 PM (assumes NZ time)
 
-**2. [maps](https://github.com/nicolasfauchereau/ICU/blob/master/maps/)**
+**2. [Climate Maps](https://github.com/nicolasfauchereau/ICU/blob/master/maps/)**
 
-  +TRMM Rainfall [(Tropical Rainfall Measurement Mission)](https://climatedataguide.ucar.edu/climate-data/trmm-tropical-rainfall-measuring-mission)
+  + TRMM Rainfall [(Tropical Rainfall Measurement Mission)](https://climatedataguide.ucar.edu/climate-data/trmm-tropical-rainfall-measuring-mission)
 
     there are two versions:
 
@@ -51,11 +51,11 @@ This github repository is organised in different sections:
     overlay the image on a high resolution basemap of the southwest Pacific.
 
       + see [plot_sp_30days_im_averages.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/plot_sp_30days_im_averages.ipynb) for the last **30 days averages** map
+
       + see [plot_sp_30days_im_anoms.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/plot_sp_30days_im_anoms.ipynb) for the last **30 days anomalies** map
 
-
-    + The other is based on the actual data available from [](), the whole process is
-    constructed around a few scripts and notebooks:
+    + The other is based on the actual data available from [ftp://disc2.nascom.nasa.gov/data/TRMM/Gridded/Derived_Products/3B42RT/Daily/](ftp://disc2.nascom.nasa.gov/data/TRMM/Gridded/Derived_Products/3B42RT/Daily/), the whole process is
+    constructed around a couple of scripts and notebooks:
 
       + [get_daily_TRMM.py](https://github.com/nicolasfauchereau/ICU/blob/master/maps/TRMM/get_daily_TRMM.py) downloads the TRMM data daily in binary and converts the files
       to NetCDF
