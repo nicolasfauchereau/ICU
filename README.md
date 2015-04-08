@@ -43,7 +43,7 @@ $ ./[make_mail_ICU.py](https://github.com/nicolasfauchereau/ICU/blob/master/mail
 
 **2. [Climate Maps](https://github.com/nicolasfauchereau/ICU/blob/master/maps/)**
 
-  + TRMM Rainfall [(Tropical Rainfall Measurement Mission)](https://climatedataguide.ucar.edu/climate-data/trmm-tropical-rainfall-measuring-mission)
+  + **TRMM Rainfall** [(Tropical Rainfall Measurement Mission)](https://climatedataguide.ucar.edu/climate-data/trmm-tropical-rainfall-measuring-mission)
 
     there are two versions:
 
@@ -61,14 +61,14 @@ $ ./[make_mail_ICU.py](https://github.com/nicolasfauchereau/ICU/blob/master/mail
       to NetCDF
       + [make_ICU_TRMM_map.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/make_ICU_TRMM_map.ipynb) creates the map of averages or anomalies for the current month (if we are after the 25) or the previous month (before the 25th)
 
-  + Outgoing Longwave Radiation (OLR) from NOAA
+
+  + **Outgoing Longwave Radiation (OLR) anomalies** from NOAA
 
       + see [make_ICU_OLR_map.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/OLR/make_ICU_OLR_map.ipynb)
 
+**3. [ENSO indices](https://github.com/nicolasfauchereau/ICU/blob/master/indices/)**
 
-**3. ENSO indices**
-
-  + this [notebook]() downloads the Southern Oscillation Index and NINO indices data from the Australian Bureau of Meteorology
+  + [plot_real_time_indices.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/indices/plot_real_time_indices.ipynb) downloads the Southern Oscillation Index and NINO indices data from the Australian Bureau of Meteorology and makes the plots
 
   + [NIWA SOI](): calculates the *NIWA* SOI according to the Troup method using the Tahiti and Darwin MSLP data made available at the [LongPaddock website]()
 
