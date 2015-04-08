@@ -48,6 +48,10 @@ The repo is organised in different sections:
     + one makes use of the images directly available from the [Nasa TRMM website](http://trmm.gsfc.nasa.gov), updated daily for the last 30 days averages and anomalies: the script downloads the image, crops it and
     overlay the image on a high resolution basemap of the southwest Pacific.
 
+      + see [plot_sp_30days_im_averages.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/plot_sp_30days_im_averages.ipynb) for the last 30 days averages map
+      + see [plot_sp_30days_im_anoms.ipynb](http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/plot_sp_30days_im_anoms.ipynb) for the last 30 days anomalies map
+
+
     + The other is based on the actual data available from [](), the whole process is
     constructed around a few scripts and notebooks:
 
