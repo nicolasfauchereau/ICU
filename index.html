@@ -23,7 +23,7 @@
 <a id="island-climate-update" class="anchor" href="#island-climate-update" aria-hidden="true"><span class="octicon octicon-link"></span></a>Island Climate Update</h1>
 
 <p>This repository gathers scripts and notebooks used to generate various products
-related to the <a href="http://www.niwa.co.nz/climare/icu">Island Climate Update (ICU)</a>.</p>
+related to the <a href="http://www.niwa.co.nz/climate/icu">Island Climate Update (ICU)</a>.</p>
 
 <p>The Island Climate Update is a monthly Regional Climate Outlook Forum and outlook
 bulletin for the southwest Pacific.</p>
@@ -32,37 +32,40 @@ bulletin for the southwest Pacific.</p>
 
 <p><a href="https://speakerdeck.com/nicolasf/icu-175">https://speakerdeck.com/nicolasf/icu-175</a></p>
 
-<p>To view examples of these products incorportated in the presentation material uploaded
-on <a href="https://speakerdeck.com/">speakerdeck</a> before the ICU teleconference.</p>
+<p>To view examples of some of these products incorportated in the presentation material uploaded
+on <a href="https://speakerdeck.com/">speakerdeck</a> before the monthly ICU teleconference.</p>
 
 <hr size="5">
 
-<p>The scripts and <a href="">notebooks</a> are written in the language <a href="">Python</a>. They make
-heavy use of the <strong>Python scientific stack</strong>: i.e. in particular the following libraries:</p>
+<p>The scripts and <a href="">notebooks</a> are written in the language <a href="www.python.org">Python</a>. They make
+heavy use of the <a href="http://www.scipy.org/about.html"><strong>Python scientific stack</strong></a>: i.e. in particular the following libraries:</p>
 
 <ul>
-<li>Numpy</li>
-<li>Scipy</li>
-<li>Pandas</li>
-<li>Matplotlib</li>
-<li>Basemap</li>
+<li><a href="http://www.numpy.org/">Numpy</a></li>
+<li><a href="http://www.scipy.org/">Scipy</a></li>
+<li><a href="http://pandas.pydata.org/">Pandas</a></li>
+<li><a href="http://matplotlib.org/">Matplotlib</a></li>
+<li><a href="http://matplotlib.org/basemap/">Basemap</a></li>
 </ul>
 
-<p>To get all these working on your platform (windows, linux, mac), I strongly recommend installing the <a href="https://store.continuum.io/cshop/anaconda/">Anaconda Python distribution</a>, developed and made available for free by <a href="http://continuum.io/">Continuum Analytics</a>.  </p>
+<p>To get all these working on your platform (Windows, Linux, Mac), I strongly recommend installing the <a href="https://store.continuum.io/cshop/anaconda/">Anaconda Python distribution</a>, developed and made available for free by <a href="http://continuum.io/">Continuum Analytics</a>.  </p>
 
-<p>The repo is organised in different sections:</p>
+<p>This github repository is organised in different sections:</p>
 
-<p><strong>1. <a href="">mailing</a></strong></p>
+<p><strong>1. <a href="https://github.com/nicolasfauchereau/ICU/blob/master/mail/">mailing</a></strong></p>
 
 <p>generates the monthly mail sent to the ICU mailing list, with time of the teleconference
   translated in the different time-zones in the region.</p>
 
 <p>usage example:</p>
 
-<pre><code>  $ ./make_mail_ICU.py 175 2015 04 02 12 30
-</code></pre>
+<p>
+$ ./<a href="https://github.com/nicolasfauchereau/ICU/blob/master/mail/make_mail_ICU.py">make_mail_ICU.py</a> 175 2015 04 02 12 30
+</p>
 
-<p><strong>2. <a href="">maps</a></strong></p>
+<p>generates the mail for the issue <em>175</em> of the ICU, teleconference to be held on the <em>2</em>nd of <em>April</em> <em>2015</em> at <em>12</em>:<em>30</em> PM (assumes NZ time)</p>
+
+<p><strong>2. <a href="https://github.com/nicolasfauchereau/ICU/blob/master/maps/">Climate Maps</a></strong></p>
 
 <ul>
 <li>
@@ -76,24 +79,32 @@ heavy use of the <strong>Python scientific stack</strong>: i.e. in particular th
 overlay the image on a high resolution basemap of the southwest Pacific.</p>
 
 <ul>
-<li>see <a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/plot_sp_30days_im_averages.ipynb">plot_sp_30days_im_averages.ipynb</a> for the last <strong>30 days averages</strong> map</li>
-<li>see <a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/plot_sp_30days_im_anoms.ipynb">plot_sp_30days_im_anoms.ipynb</a> for the last <strong>30 days anomalies</strong> map</li>
+<li><p>see <a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/plot_sp_30days_im_averages.ipynb">plot_sp_30days_im_averages.ipynb</a> for the last <strong>30 days averages</strong> map</p></li>
+<li><p>see <a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/plot_sp_30days_im_anoms.ipynb">plot_sp_30days_im_anoms.ipynb</a> for the last <strong>30 days anomalies</strong> map</p></li>
 </ul>
 </li>
 <li>
-<p>The other is based on the actual data available from <a href=""></a>, the whole process is
-constructed around a few scripts and notebooks:</p>
+<p>The other is based on the actual data available from ftp://disc2.nascom.nasa.gov/data/TRMM/Gridded/Derived_Products/3B42RT/Daily/, the whole process is
+constructed around a couple of scripts and notebooks:</p>
 
 <ul>
 <li>
-<a href="">get_daily_TRMM.py</a> downloads the TRMM data daily in binary and converts the files
+<a href="https://github.com/nicolasfauchereau/ICU/blob/master/maps/TRMM/get_daily_TRMM.py">get_daily_TRMM.py</a> downloads the TRMM data daily in binary and converts the files
 to NetCDF</li>
-<li><a href=""></a></li>
+<li>
+<a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/make_ICU_TRMM_map.ipynb">make_ICU_TRMM_map.ipynb</a> creates the map of averages or anomalies for the current month (if we are after the 25) or the previous month (before the 25th)</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>Sea Surface Temperature anomalies from the OI-SST dataset</p></li>
+<li>
+<p>Outgoing Longwave Radiation (OLR) from NOAA</p>
+
+<ul>
+<li>see <a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/OLR/make_ICU_OLR_map.ipynb">make_ICU_OLR_map.ipynb</a>
+</li>
+</ul>
+</li>
 </ul>
 
 <p><strong>3. ENSO indices</strong></p>
