@@ -92,7 +92,8 @@ constructed around a couple of scripts and notebooks:</p>
 <a href="https://github.com/nicolasfauchereau/ICU/blob/master/maps/TRMM/get_daily_TRMM.py">get_daily_TRMM.py</a> downloads the TRMM data daily in binary and converts the files
 to NetCDF</li>
 <li>
-<a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/make_ICU_TRMM_map.ipynb">make_ICU_TRMM_map.ipynb</a> creates the map of averages or anomalies for the current month (if we are after the 25) or the previous month (before the 25th)</li>
+<a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/make_ICU_TRMM_map.ipynb">make_ICU_TRMM_map.ipynb</a> creates the map of averages or anomalies for the current month (if we are after the 25) or the previous month (before the 25th)<br>
+</li>
 </ul>
 </li>
 </ul>
@@ -101,7 +102,15 @@ to NetCDF</li>
 <p><strong>Outgoing Longwave Radiation (OLR) anomalies</strong> from NOAA</p>
 
 <ul>
-<li>see <a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/OLR/make_ICU_OLR_map.ipynb">make_ICU_OLR_map.ipynb</a>
+<li>see <a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/OLR/make_ICU_OLR_map.ipynb">make_ICU_OLR_map.ipynb</a><br>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sea Surface Temperature (SST) anomalies</strong> from the NOAA OISST V2 dataset</p>
+
+<ul>
+<li>see <a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/SST/make_ICU_SST_map.ipynb">make_ICU_SST_map.ipynb</a><br>
 </li>
 </ul>
 </li>
@@ -110,11 +119,19 @@ to NetCDF</li>
 <p><strong>3. <a href="https://github.com/nicolasfauchereau/ICU/blob/master/indices/">ENSO indices</a></strong></p>
 
 <ul>
-<li><p><a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/indices/plot_real_time_indices.ipynb">plot_real_time_indices.ipynb</a> downloads the Southern Oscillation Index and NINO indices data from the Australian Bureau of Meteorology and makes the plots</p></li>
-<li><p><a href="">NIWA SOI</a>: calculates the <em>NIWA</em> SOI according to the Troup method using the Tahiti and Darwin MSLP data made available at the <a href="">LongPaddock website</a></p></li>
+<li><p><a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/indices/plot_real_time_indices.ipynb">plot_real_time_indices.ipynb</a> downloads the Southern Oscillation Index and NINO indices data from the <a href="http://www.bom.gov.au/">Australian Bureau of Meteorology (BoM)</a> and makes the plots</p></li>
+<li><p><a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/indices/realtime_NIWA_SOI.ipynb">realtime_NIWA_SOI.ipynb</a>: calculates the <em>NIWA</em> SOI according to the Troup method using the Tahiti and Darwin MSLP data made available via ftp by the <a href="http://www.bom.gov.au/">BoM</a> at ftp://ftp.bom.gov.au/anon/home/ncc/www/sco/soi/</p></li>
 </ul>
 
-<p><strong>4. TRMM Regional Rainfall Estimates</strong></p>
+<p><strong>4. TRMM-based Near realtime Monthly Regional Rainfall Estimates</strong></p>
+
+<p>The rainfall regional estimates for the ICU Island Groups are calculated from the TRMM daily dataset (updated daily, 2 days latency).</p>
+
+<p>For each Island group, the monthly value is derived from the average of all grid-points (or "pixels") in the TRMM Dataset that are contained of intersect with a coastline, to ensure that the values correspond as closely as possible to rainfall on land, and excluding rainfall falling on ocean surfaces.</p>
+
+<p>The climatology used has been established over the 2001 – 2012 period. The categories ("Well-below", "Below", etc.) are determined according to the percentage of the normal rainfall for that month.</p>
+
+<p>The whole process relies on a suite of Python scripts and IPython notebooks, they will be uploaded here shortly</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/nicolasfauchereau/ICU">ICU</a> is maintained by <a href="https://github.com/nicolasfauchereau">nicolasfauchereau</a>.</span>
