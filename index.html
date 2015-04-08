@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>ICU by nicolasfauchereau</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">ICU</h1>
+      <h2 class="project-tagline">Repository for the Island Climate Update scripts and IPython notebooks</h2>
+      <a href="https://github.com/nicolasfauchereau/ICU" class="btn">View on GitHub</a>
+      <a href="https://github.com/nicolasfauchereau/ICU/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nicolasfauchereau/ICU/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="island-climate-update" class="anchor" href="#island-climate-update" aria-hidden="true"><span class="octicon octicon-link"></span></a>Island Climate Update</h1>
+
+<p>This repository gathers scripts and notebooks used to generate various products
+related to the <a href="http://www.niwa.co.nz/climare/icu">Island Climate Update (ICU)</a>.</p>
+
+<p>The Island Climate Update is a monthly Regional Climate Outlook Forum and outlook
+bulletin for the southwest Pacific.</p>
+
+<p>go to:</p>
+
+<p><a href="https://speakerdeck.com/nicolasf/icu-175">https://speakerdeck.com/nicolasf/icu-175</a></p>
+
+<p>To view examples of these products incorportated in the presentation material uploaded
+on <a href="https://speakerdeck.com/">speakerdeck</a> before the ICU teleconference.</p>
+
+<hr size="5">
+
+<p>The scripts and <a href="">notebooks</a> are written in the language <a href="">Python</a>. They make
+heavy use of the <strong>Python scientific stack</strong>: i.e. in particular the following libraries:</p>
+
+<ul>
+<li>Numpy</li>
+<li>Scipy</li>
+<li>Pandas</li>
+<li>Matplotlib</li>
+<li>Basemap</li>
+</ul>
+
+<p>To get all these working on your platform (windows, linux, mac), I strongly recommend installing the <a href="https://store.continuum.io/cshop/anaconda/">Anaconda Python distribution</a>, developed and made available for free by <a href="http://continuum.io/">Continuum Analytics</a>.  </p>
+
+<p>The repo is organised in different sections:</p>
+
+<p><strong>1. <a href="">mailing</a></strong></p>
+
+<p>generates the monthly mail sent to the ICU mailing list, with time of the teleconference
+  translated in the different time-zones in the region.</p>
+
+<p>usage example:</p>
+
+<pre><code>  $ ./make_mail_ICU.py 175 2015 04 02 12 30
+</code></pre>
+
+<p><strong>2. <a href="">maps</a></strong></p>
+
+<ul>
+<li>
+<p>TRMM Rainfall <a href="https://climatedataguide.ucar.edu/climate-data/trmm-tropical-rainfall-measuring-mission">(Tropical Rainfall Measurement Mission)</a></p>
+
+<p>there are two versions:</p>
+
+<ul>
+<li>
+<p>one makes use of the images directly available from the <a href="http://trmm.gsfc.nasa.gov">Nasa TRMM website</a>, updated daily for the last 30 days averages and anomalies: the script downloads the image, crops it and
+overlay the image on a high resolution basemap of the southwest Pacific.</p>
+
+<ul>
+<li>see <a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/plot_sp_30days_im_averages.ipynb">plot_sp_30days_im_averages.ipynb</a> for the last <strong>30 days averages</strong> map</li>
+<li>see <a href="http://nbviewer.ipython.org/github/nicolasfauchereau/ICU/blob/master/maps/TRMM/plot_sp_30days_im_anoms.ipynb">plot_sp_30days_im_anoms.ipynb</a> for the last <strong>30 days anomalies</strong> map</li>
+</ul>
+</li>
+<li>
+<p>The other is based on the actual data available from <a href=""></a>, the whole process is
+constructed around a few scripts and notebooks:</p>
+
+<ul>
+<li>
+<a href="">get_daily_TRMM.py</a> downloads the TRMM data daily in binary and converts the files
+to NetCDF</li>
+<li><a href=""></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Sea Surface Temperature anomalies from the OI-SST dataset</p></li>
+</ul>
+
+<p><strong>3. ENSO indices</strong></p>
+
+<ul>
+<li><p>this <a href="">notebook</a> downloads the Southern Oscillation Index and NINO indices data from the Australian Bureau of Meteorology</p></li>
+<li><p><a href="">NIWA SOI</a>: calculates the <em>NIWA</em> SOI according to the Troup method using the Tahiti and Darwin MSLP data made available at the <a href="">LongPaddock website</a></p></li>
+</ul>
+
+<p><strong>4. TRMM Regional Rainfall Estimates</strong></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nicolasfauchereau/ICU">ICU</a> is maintained by <a href="https://github.com/nicolasfauchereau">nicolasfauchereau</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
