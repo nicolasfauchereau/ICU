@@ -1,9 +1,11 @@
+import os
+
 def gmtColormap(palette):
       from matplotlib.colors import LinearSegmentedColormap,Normalize
       import colorsys
       import numpy as N
       try:
-          f = open('/home/nicolasf/pythonlibs/GMTcolormaps/' + palette + '.cpt')
+          f = open(os.path.join(os.environ['HOME']), 'pythonlibs/GMTcolormaps/', palette,'.cpt' )
       except:
           print "file " + palette + ".cpt not found"
           return None
@@ -107,46 +109,46 @@ def reverse(cmap):
     cmap_r = cmap_map(lambda x: x[::-1], cmap)
     return(cmap_r)
 
-def cmap_discretize(cmap, N): 
+def cmap_discretize(cmap, N):
 	"""
-	Return a discrete colormap from the continuous colormap cmap. 
+	Return a discrete colormap from the continuous colormap cmap.
 
-	cmap: colormap instance, eg. cm.jet.  
-	N: Number of colors. 
+	cmap: colormap instance, eg. cm.jet.
+	N: Number of colors.
 
-	Example 
-	x = resize(arange(100), (5,100)) 
-	djet = cmap_discretize(cm.jet, 5) 
-	imshow(x, cmap=djet) 
-	""" 
+	Example
+	x = resize(arange(100), (5,100))
+	djet = cmap_discretize(cm.jet, 5)
+	imshow(x, cmap=djet)
+	"""
 	import numpy as np
-	from pylab import interp 
+	from pylab import interp
 	import pylab as pl
 	import pylab as plt
 
-	cdict = cmap._segmentdata.copy() 
-	# N colors 
-	colors_i = np.linspace(0,1.,N) 
-	# N+1 indices 
-	indices = np.linspace(0,1.,N+1) 
-	for key in ('red','green','blue'): 
-		# Find the N colors 
-		D = np.array(cdict[key]) 
-		#I = interpolate.interp1d(D[:,0], D[:,1]) 
-		#I = interpolate.interp1d(D[:,0],D[:,1]) 
-		colors = interp(colors_i,D[:,0],D[:,1]) 
-		# Place these colors at the correct indices. 
-		A = np.zeros((N+1,3), float) 
-		A[:,0] = indices 
-		A[1:,1] = colors 
-		A[:-1,2] = colors 
-		# Create a tuple for the dictionary. 
-		L = [] 
-		for l in A: 
-			L.append(tuple(l)) 
-		cdict[key] = tuple(L) 
-	# Return colormap object. 
-	return plt.matplotlib.colors.LinearSegmentedColormap('colormap',cdict,1024) 
+	cdict = cmap._segmentdata.copy()
+	# N colors
+	colors_i = np.linspace(0,1.,N)
+	# N+1 indices
+	indices = np.linspace(0,1.,N+1)
+	for key in ('red','green','blue'):
+		# Find the N colors
+		D = np.array(cdict[key])
+		#I = interpolate.interp1d(D[:,0], D[:,1])
+		#I = interpolate.interp1d(D[:,0],D[:,1])
+		colors = interp(colors_i,D[:,0],D[:,1])
+		# Place these colors at the correct indices.
+		A = np.zeros((N+1,3), float)
+		A[:,0] = indices
+		A[1:,1] = colors
+		A[:-1,2] = colors
+		# Create a tuple for the dictionary.
+		L = []
+		for l in A:
+			L.append(tuple(l))
+		cdict[key] = tuple(L)
+	# Return colormap object.
+	return plt.matplotlib.colors.LinearSegmentedColormap('colormap',cdict,1024)
 
 def clisttomapdict(clist,name='myColorMap', number=256):
       from matplotlib import colors
@@ -188,11 +190,11 @@ def textfiletoarray(file_name,numberOfHeaderLines=0):
      f.close()
      return(array)
 
-def readnclcolormaps(fileName, Path='/home/nicolasf/pythonlibs/NCLcolormaps',returnAs='colorMap',alpha=1.):
+def readnclcolormaps(fileName,returnAs='colorMap',alpha=1.):
       from os.path import exists
       from glob import glob
       from colormaps_functions import clisttomapdict, textfiletoarray
-      filePath = Path + '/' + fileName+'.rgb'
+      filePath = os.path.join(os.environ['HOME'], 'pythonlibs/NCLcolormaps', fileName, '.rgb')
       if not exists(filePath):
           print 'file not found ',filePath
           print 'Possible  ones are '
@@ -220,26 +222,26 @@ def loadCCPLOTcolormap(filename):
     import matplotlib as mpl
     """"Returns a tuple of matplotlib colormap, matplotlib norm,
     and a list of ticks loaded from the file filename in format:
-    
+
     BOUNDS
     from1 to1 step1
     from2 to2 step2
     ...
-    
+
     TICKS
     from1 to1 step1
     from2 to2 step2
-    
+
     COLORS
     r1 g1 b1
     r2 g2 b2
     ...
-    
+
     UNDER_OVER_BAD_COLORS
     ro go bo
     ru gu bu
     rb gb bb
-    
+
     Where fromn, ton, stepn are floating point numbers as would be supplied
     to numpy.arange, and rn, gn, bn are the color components the n-th color
     stripe. Components are expected to be in base10 format (0-255).
@@ -253,14 +255,14 @@ def loadCCPLOTcolormap(filename):
     Returns:
         A tuple of: instance of ListedColormap, instance of BoundaryNorm, ticks.
     """
-    path = '/home/nicolasf/pythonlibs/CCPLOTcolormaps/'
-    
+    path = os.path.join(os.environ['HOME'], 'pythonlibs/CCPLOTcolormaps')
+
     bounds = []
     ticks = []
     rgbarray = []
     specials = []
     mode = "COLORS"
-    
+
     fp = None
     try:
         fp = open(os.path.join(path, filename), "r")
@@ -299,7 +301,7 @@ def loadCCPLOTcolormap(filename):
         except IndexError: pass
     else:
         colormap = None
-        
+
     if len(bounds) == 0:
         norm = None
     else:
