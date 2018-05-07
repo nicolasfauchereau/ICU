@@ -1,0 +1,30 @@
+﻿Island,T1,T2,T3,CATEGORY,CONFIDENCE
+Guam,20,30,50,ABOVE,High
+N. Marianas,20,35,45,ABOVE,High
+Tonga,15,40,45,AVG - ABOVE,Moderate-High
+Marshall Islands,15,40,45,AVG - ABOVE,Moderate
+Niue,25,35,40,AVG - ABOVE,Moderate-High
+Austral Islands,25,35,40,AVG - ABOVE,Moderate-High
+Cook Islands (Southern) ,25,35,40,AVG - ABOVE,Moderate-High
+Fiji,25,40,35,AVG - ABOVE,High
+FSM,25,40,35,AVG - ABOVE,Moderate
+Palau,25,40,35,AVG - ABOVE,Moderate
+Papua New Guinea,25,40,35,AVG - ABOVE,Moderate
+Pitcairn Island,25,40,35,AVG - ABOVE,Moderate-High
+Vanuatu (South),35,40,25,AVG - BELOW,Moderate
+American Samoa ,35,40,25,AVG - BELOW,Moderate
+Solomon Islands,35,40,25,AVG - BELOW,Moderate
+Vanuatu (North),35,40,25,AVG - BELOW,Moderate-High
+Wallis & Futuna,35,40,25,AVG - BELOW,Moderate
+New Caledonia,40,35,25,AVG - BELOW,Moderate-High
+Samoa,40,35,25,AVG - BELOW,Moderate-High
+Tuamotu Islands,40,35,25,AVG - BELOW,Moderate
+Society Islands,40,35,25,AVG - BELOW,Moderate
+Cook Islands (Northern) ,45,35,20,BELOW,High
+Tokelau,45,35,20,BELOW,Moderate
+Tuvalu,45,35,20,BELOW,Moderate-High
+Nauru,45,35,20,BELOW,High
+Kiribati (Western),50,30,20,BELOW,High
+Kiribati (Eastern),55,30,15,BELOW,High
+Marquesas,60,30,10,BELOW,High
+Central Kiribati (Phoenix),60,30,10,BELOW,High
